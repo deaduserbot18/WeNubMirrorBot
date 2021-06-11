@@ -1,19 +1,27 @@
-[![Slam](https://telegra.ph/file/db03910496f06094f1f7a.jpg)](https://youtu.be/Pk_TthHfLeE)
+[![We◉NúbGang](https://telegra.ph/file/3b9816240fff1c1fbfb9e.jpg)](https://t.me/WeNubMirrors)
 
-# Slam Mirror Bot
-![GitHub Repo stars](https://img.shields.io/github/stars/breakdowns/slam-mirrorbot?color=blue&style=flat)
-![GitHub forks](https://img.shields.io/github/forks/breakdowns/slam-mirrorbot?color=green&style=flat)
-![GitHub issues](https://img.shields.io/github/issues/breakdowns/slam-mirrorbot)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/breakdowns/slam-mirrorbot)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/breakdowns/slam-mirrorbot)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/breakdowns/slam-mirrorbot)
-![GitHub contributors](https://img.shields.io/github/contributors/breakdowns/slam-mirrorbot?style=flat)
-![GitHub repo size](https://img.shields.io/github/repo-size/breakdowns/slam-mirrorbot?color=red)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/breakdowns/slam-mirrorbot)
-![GitHub](https://img.shields.io/github/license/breakdowns/slam-mirrorbot)
-[![Slam Mirror Support](https://img.shields.io/badge/slam%20mirror%20bot-support%20group-blue)](https://t.me/SlamMirrorSupport)
+# We◉NúbGang Mirror Bot
+![GitHub Repo stars](https://img.shields.io/github/stars/anmoldh/wenubmirrorbot?color=blue&style=flat)
+![GitHub forks](https://img.shields.io/github/forks/anmoldh/wenubmirrorbot?color=green&style=flat)
+![GitHub issues](https://img.shields.io/github/issues/anmoldh/wenubmirrorbot)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/anmoldh/wenubmirrorbot)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/anmoldh/wenubmirrorbot)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/anmoldh/wenubmirrorbot)
+![GitHub contributors](https://img.shields.io/github/contributors/anmoldh/wenubmirrorbot?style=flat)
+![GitHub repo size](https://img.shields.io/github/repo-size/anmoldh/wenubmirrorbot?color=red)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/anmoldh/wenubmirrorbot)
+![GitHub](https://img.shields.io/github/license/anmoldh/wenubmirrorbot)
+[![We◉NúbGang | Mirrors](https://img.shields.io/badge/We◉NúbGang | Mirrors-blue)](https://t.me/WeNubMirrors)
 
-**Slam Mirror Bot** is a _multipurpose_ Telegram Bot writen in Python for mirroring files on the Internet to our beloved Google Drive.
+**We◉NúbGang Mirror Bot** is a _multipurpose_ Telegram Bot writen in Python for mirroring files on the Internet to our beloved Google Drive.
+
+# Mods Done
+- Some UI improvement
+- Redefined Progress Bar
+- More Attractive enhanced look
+- More Stable
+- Remove Mess & Unnecessary things
+- And Much More ;)
 
 # Features supported:
 ## Additional Features
@@ -38,7 +46,7 @@ Naniplay.com, Naniplay.nanime.in, Naniplay.nanime.biz, Sbembed.com, Streamsb.net
 Uptobox.com (Uptobox account must be premium),
 Onedrive/1drv.ms (Only works for file not folder or busines account)
 ```
-## From Original Repos
+## From Orignal Repos
 - Mirroring direct download links, Torrent, and Telegram files to Google Drive
 - Mirroring Mega.nz links to Google Drive (If your Mega account not premium, it will limit 4-5gb/day)
 - Copy files from someone's Drive to your Drive (Using Autorclone)
@@ -68,7 +76,7 @@ Deploying is pretty much straight forward and is divided into several steps as f
 
 - Clone this repo:
 ```
-git clone https://github.com/breakdowns/slam-mirrorbot mirrorbot/
+git clone https://github.com/Anmoldh/WeNubMirrorBot
 cd mirrorbot
 ```
 
@@ -207,7 +215,7 @@ sudo docker run mirrorbot
 - Give stars and Fork this repo then upload **token.pickle** to your forks
 - Hit the **DEPLOY TO HEROKU** button and follow the further instructions in the screen
 
-**NOTE**: If you didn't upload **token.pickle**, uploading will not work. How to generate **token.pickle**? [Read here](https://github.com/breakdowns/slam-mirrorbot#getting-google-oauth-api-credential-file)
+**NOTE**: If you didn't upload **token.pickle**, uploading will not work. How to generate **token.pickle**? [Read here](https://github.com/Anmoldh/WeNubMirrorBot#getting-google-oauth-api-credential-file)
 <p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
 
 ## Deploying on Heroku with heroku-cli and Goorm IDE
@@ -292,6 +300,7 @@ Where host is the name of extractor (eg. Youtube, Twitch). Multiple accounts of 
 # Credits
 
 Thanks to:
+- [Breakdowns](https://github.com/breakdowns/slam-mirrorbot) For His Huge Level of Modifications & Features
 - [out386](https://github.com/out386) heavily inspired from Telegram Bot which is written in JS
 - [Izzy12](https://github.com/lzzy12/) for original repo
 - [Dank-del](https://github.com/Dank-del/) for base repo
