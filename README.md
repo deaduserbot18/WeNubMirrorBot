@@ -11,7 +11,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/anmoldh/wenubmirrorbot?color=red)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/anmoldh/wenubmirrorbot)
 ![GitHub](https://img.shields.io/github/license/anmoldh/wenubmirrorbot)
-[![We◉NúbGang | Mirrors](https://img.shields.io/badge/We◉NúbGang%20|%Mirrors-blue)](https://t.me/WeNubMirrors)
+[![We◉NúbGang Mirrors](https://img.shields.io/badge/We◉NúbGang%20|%20Mirrors-blue)](https://t.me/WeNubMirrors)
 
 **We◉NúbGang Mirror Bot** is a _multipurpose_ Telegram Bot writen in Python for mirroring files on the Internet to our beloved Google Drive.
 
