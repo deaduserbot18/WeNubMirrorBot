@@ -308,4 +308,4 @@ Thanks to:
 - [SVR666](https://github.com/SVR666/) for some features & fixes
 - [anasty17](https://github.com/anasty17) for some features & help
 
-And many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/breakdowns/slam-mirrorbot/graphs/contributors).
+And many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/anmoldh/wenubmirrorbot/graphs/contributors).
