@@ -69,10 +69,6 @@ HFS, LZH, LZMA, LZMA2, MBR, MSI, MSLZ, NSIS,
 NTFS, RPM, SquashFS, UDF, VHD, XAR, Z.
 ```
 
-# How to deploy?
-Deploying is pretty much straight forward and is divided into several steps as follows:
-## Installing requirements
-
 - Clone this repo:
 ```
 git clone https://github.com/Anmoldh/WeNubMirrorBot
