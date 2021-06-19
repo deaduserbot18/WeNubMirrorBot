@@ -6,7 +6,7 @@ class _BotCommands:
         self.TarMirrorCommand = 'tarmirror'
         self.CancelMirror = 'cancel'
         self.CancelAllCommand = 'cancelall'
-        self.ListCommand = 'listpm'
+        self.ListCommand = 'list'
         self.StatusCommand = 'status'
         self.AuthorizedUsersCommand = 'users'
         self.AuthorizeCommand = 'authorize'
@@ -25,5 +25,9 @@ class _BotCommands:
         self.TarWatchCommand = 'tarwatch'
         self.DeleteCommand = 'del'
         self.UsageCommand = 'usage'
+        self.MediaInfoCommand = 'mediainfo'
+        self.ConfigMenuCommand = 'config'
+        self.ShellCommand = 'shell'
+        self.UpdateCommand = 'update'
 
 BotCommands = _BotCommands()
