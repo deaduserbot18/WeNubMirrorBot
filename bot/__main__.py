@@ -1,6 +1,7 @@
 import shutil, psutil
 import signal
 import os
+import importlib
 
 from pyrogram import idle
 from bot import app
@@ -18,9 +19,13 @@ from bot.helper.telegram_helper.message_utils import *
 from .helper.ext_utils.bot_utils import get_readable_file_size, get_readable_time
 from .helper.telegram_helper.filters import CustomFilters
 from bot.helper.telegram_helper import button_build
-from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, search, delete, speedtest, usage, mediainfo, count
+from bot.modules import ALL_MODULES # Auto Load all modules without name problems
 
-now=datetime.now(pytz.timezone('Asia/Kolkata'))
+for module in ALL_MODULES:
+    imported_module = importlib.import_module("bot.modules." + module)
+    importlib.reload(imported_module)
+
+now=datetime.now(pytz.timezone('Asia/Jakarta'))
 
 
 def stats(update, context):
@@ -35,17 +40,17 @@ def stats(update, context):
     cpuUsage = psutil.cpu_percent(interval=0.5)
     memory = psutil.virtual_memory().percent
     disk = psutil.disk_usage('/').percent
-    stats = f'𝐁𝐨𝐭 𝐔𝐩𝐭𝐢𝐦𝐞: {currentTime}\n' \
-            f'𝐒𝐭𝐚𝐫𝐭 𝐓𝐢𝐦𝐞: {current}\n' \
-            f'𝐓𝐨𝐭𝐚𝐥 𝐃𝐢𝐬𝐤 𝐒𝐩𝐚𝐜𝐞: {total}\n' \
-            f'𝐔𝐬𝐞𝐝: {used}  ' \
-            f'𝐅𝐫𝐞𝐞: {free}\n\n' \
-            f'📊𝐃𝐚𝐭𝐚 𝐔𝐬𝐚𝐠𝐞📊\n𝐔𝐩𝐥𝐨𝐚𝐝: {sent}\n' \
-            f'𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝: {recv}\n\n' \
-            f'𝐂𝐏𝐔: {cpuUsage}%\n' \
-            f'𝐑𝐀𝐌: {memory}%\n' \
-            f'𝐃𝐈𝐒𝐊: {disk}%'
-    sendMessage(stats, context.bot, update)
+    stats = f'<b>Bot Uptime:</b> {currentTime}\n' \
+            f'<b>Start Time:</b> {current}\n' \
+            f'<b>Total Disk Space:</b> {total}\n' \
+            f'<b>Used:</b> {used}  ' \
+            f'<b>Free:</b> {free}\n\n' \
+            f'📊Data Usage📊\n<b>Upload:</b> {sent}\n' \
+            f'<b>Download:</b> {recv}\n\n' \
+            f'<b>CPU:</b> {cpuUsage}%\n' \
+            f'<b>RAM:</b> {memory}%\n' \
+            f'<b>DISK:</b> {disk}%'
+    update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)
 
 
 def start(update, context):
@@ -54,8 +59,8 @@ This bot can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Mirror Group", "https://t.me/WeNubMirrors")
-    buttons.buildbutton("We◉NúbGang", "https://t.me/WeNubGang")
+    buttons.buildbutton("Repo", "https://github.com/breakdowns/slam-mirrorbot")
+    buttons.buildbutton("Support Group", "https://t.me/SlamMirrorSupport")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     LOGGER.info('UID: {} - UN: {} - MSG: {}'.format(update.message.chat.id, update.message.chat.username, update.message.text))
     uptime = get_readable_time((time.time() - botStartTime))
@@ -129,13 +134,17 @@ def bot_help(update, context):
 
 /{BotCommands.LogCommand}: Get a log file of the bot. Handy for getting crash reports
 
+/{BotCommands.ConfigMenuCommand}: Get Info Menu about bot config (Owner Only).
+
+/{BotCommands.UpdateCommand}: Update Bot from Upstream Repo. (Owner Only).
+
 /{BotCommands.UsageCommand}: To see Heroku Dyno Stats (Owner & Sudo only).
 
 /{BotCommands.SpeedCommand}: Check Internet Speed of the Host
 
-/shell: Run commands in Shell (Terminal).
+/{BotCommands.MediaInfoCommand}: Get detailed info about replied media (Only for Telegram file).
 
-/mediainfo: Get detailed info about replied media (Only for Telegram file).
+/{BotCommands.ShellCommand}: Run commands in Shell (Terminal).
 
 /tshelp: Get help for Torrent search module.
 '''
@@ -166,6 +175,10 @@ def bot_help(update, context):
 /{BotCommands.StatsCommand}: Show Stats of the machine the bot is hosted on
 
 /{BotCommands.SpeedCommand}: Check Internet Speed of the Host
+
+/{BotCommands.MediaInfoCommand}: Get detailed info about replied media (Only for Telegram file).
+
+/tshelp: Get help for Torrent search module.
 '''
 
     if CustomFilters.sudo_user(update) or CustomFilters.owner_filter(update):
@@ -179,9 +192,20 @@ BotCommand(f'{BotCommands.MirrorCommand}', 'Start Mirroring'),
 BotCommand(f'{BotCommands.TarMirrorCommand}','Upload tar (zipped) file'),
 BotCommand(f'{BotCommands.UnzipMirrorCommand}','Extract files'),
 BotCommand(f'{BotCommands.CloneCommand}','Copy file/folder to Drive'),
+BotCommand(f'{BotCommands.CountCommand}','Count file/folder of Drive link'),
 BotCommand(f'{BotCommands.WatchCommand}','Mirror YT-DL support link'),
 BotCommand(f'{BotCommands.TarWatchCommand}','Mirror Youtube playlist link as tar'),
-BotCommand(f'{BotCommands.StatusCommand}','Get Mirror Status message')]
+BotCommand(f'{BotCommands.CancelMirror}','Cancel a task'),
+BotCommand(f'{BotCommands.CancelAllCommand}','Cancel all tasks'),
+BotCommand(f'{BotCommands.DeleteCommand}','Delete file from Drive'),
+BotCommand(f'{BotCommands.ListCommand}',' [query] Searches files in Drive'),
+BotCommand(f'{BotCommands.StatusCommand}','Get Mirror Status message'),
+BotCommand(f'{BotCommands.StatsCommand}','Bot Usage Stats'),
+BotCommand(f'{BotCommands.HelpCommand}','Get Detailed Help'),
+BotCommand(f'{BotCommands.MediaInfoCommand}','Get detailed info about replied media'),
+BotCommand(f'{BotCommands.SpeedCommand}','Check Speed of the host'),
+BotCommand(f'{BotCommands.LogCommand}','Bot Log [owner/sudo only]'),
+BotCommand(f'{BotCommands.RestartCommand}','Restart bot [owner/sudo only]')]
 
 
 def main():
