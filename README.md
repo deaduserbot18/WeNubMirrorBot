@@ -1,50 +1,51 @@
-[![Slam](https://telegra.ph/file/db03910496f06094f1f7a.jpg)](https://youtu.be/Pk_TthHfLeE)
+[![We◉NúbGang](https://telegra.ph/file/3b9816240fff1c1fbfb9e.jpg)](https://t.me/WeNubMirrors)
 
-# Slam Mirror Bot
-![GitHub Repo stars](https://img.shields.io/github/stars/breakdowns/slam-mirrorbot?color=blue&style=flat)
-![GitHub forks](https://img.shields.io/github/forks/breakdowns/slam-mirrorbot?color=green&style=flat)
-![GitHub issues](https://img.shields.io/github/issues/breakdowns/slam-mirrorbot)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/breakdowns/slam-mirrorbot)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/breakdowns/slam-mirrorbot)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/breakdowns/slam-mirrorbot)
-![GitHub contributors](https://img.shields.io/github/contributors/breakdowns/slam-mirrorbot?style=flat)
-![GitHub repo size](https://img.shields.io/github/repo-size/breakdowns/slam-mirrorbot?color=red)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/breakdowns/slam-mirrorbot)
-![GitHub](https://img.shields.io/github/license/breakdowns/slam-mirrorbot)
-[![Slam Mirror Support](https://img.shields.io/badge/slam%20mirror%20bot-support%20group-blue)](https://t.me/SlamMirrorSupport)
+# We◉NúbGang Mirror Bot
+![GitHub Repo stars](https://img.shields.io/github/stars/anmoldh/wenubmirrorbot?color=blue&style=flat)
+![GitHub forks](https://img.shields.io/github/forks/anmoldh/wenubmirrorbot?color=green&style=flat)
+![GitHub issues](https://img.shields.io/github/issues/anmoldh/wenubmirrorbot)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/anmoldh/wenubmirrorbot)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/anmoldh/wenubmirrorbot)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/anmoldh/wenubmirrorbot)
+![GitHub contributors](https://img.shields.io/github/contributors/anmoldh/wenubmirrorbot?style=flat)
+![GitHub repo size](https://img.shields.io/github/repo-size/anmoldh/wenubmirrorbot?color=red)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/anmoldh/wenubmirrorbot)
+![GitHub](https://img.shields.io/github/license/anmoldh/wenubmirrorbot)
+[![We◉NúbGang Mirrors](https://img.shields.io/badge/We◉NúbGang%20|%20Mirrors-blue)](https://t.me/WeNubMirrors)
 
-**Slam Mirror Bot** is a _multipurpose_ Telegram Bot writen in Python for mirroring files on the Internet to our beloved Google Drive.
+**We◉NúbGang Mirror Bot** is a _multipurpose_ Telegram Bot writen in Python for mirroring files on the Internet to our beloved Google Drive.
+
+# Mods Done
+- Some UI improvement
+- Redefined Progress Bar
+- More Attractive enhanced look
+- More Stable
+- Remove Mess & Unnecessary things
+- And Much More ;)
 
 # Features supported:
 ## Additional Features
 - Get detailed info about replied media (Only for Telegram file)
+- Nyaa.si and Sukebei Torrent search
 - Speedtest with picture results
 - Stop duplicate cloning Google Drive & mirroring Mega support
 - Limiting size Torrent/Direct, Mega, cloning Google Drive support
 - Sudo with Database support
 - Multiple Trackers support
 - Check Heroku dynos stats
-- Heroku config support
-- Updater (Only for Heroku)
 - Extracting **tar.xz** support
-- Create Tar Google Drive folder
 - Custom image support
 - Counting file/folder
 - Shell and Executor
 - View Link button
-- Torrent search supported:
-```
-nyaa, sukebei, 1337x, piratebay, tgx,
-yts, eztv, torlock, rarbg
-```
 - Direct links supported:
 ```
 letsupload.io, hxfile.co, anonfiles.com, fembed.com, femax20.com, layarkacaxxi.icu,
 naniplay.com, naniplay.nanime.in, naniplay.nanime.biz, sbembed.com, streamsb.net,
 feurl.com, pixeldrain.com, uptobox.com (Uptobox account must be premium),
-1drv.ms (Only works for file not folder or business account)
+1drv.ms (Only works for file not folder or busines account)
 ```
-## From Original Repos
+## From Orignal Repos
 - Mirroring direct download links, Torrent, and Telegram files to Google Drive
 - Mirroring Mega.nz links to Google Drive (If your Mega account not premium, it will limit 4-5gb/day)
 - Copy files from someone's Drive to your Drive (Using Autorclone)
@@ -74,7 +75,7 @@ Deploying is pretty much straight forward and is divided into several steps as f
 
 - Clone this repo:
 ```
-git clone https://github.com/breakdowns/slam-mirrorbot mirrorbot/
+git clone https://github.com/Anmoldh/WeNubMirrorBot
 cd mirrorbot
 ```
 
@@ -110,7 +111,7 @@ pip3 install -r requirements-cli.txt
 **2. Using Heroku PostgreSQL**
 <p><a href="https://dev.to/prisma/how-to-setup-a-free-postgresql-database-on-heroku-1dc1"> <img src="https://img.shields.io/badge/see%20on%20dev.to-black?style=for-the-badge&logo=dev-dot-to" width="190""/></a></p>
 
-**NOTE**: If you are deploying on Heroku using Heroku button, no need to generate database manually, because it will automatic generate database when first deploying
+**NOTE**: If you deploying on Heroku using Heroku button, no need to generate database manually, because it will automatic generate database when first deploying
 
 </details>
 
@@ -136,8 +137,6 @@ Fill up rest of the fields. Meaning of each fields are discussed below:
 - **DOWNLOAD_DIR**: The path to the local folder where the downloads should be downloaded to
 - **DOWNLOAD_STATUS_UPDATE_INTERVAL**: A short interval of time in seconds after which the Mirror progress message is updated. (I recommend to keep it `5` seconds at least)  
 - **AUTO_DELETE_MESSAGE_DURATION**: Interval of time (in seconds), after which the bot deletes it's message (and command message) which is expected to be viewed instantly. (**Note**: Set to `-1` to never automatically delete messages)
-- **UPSTREAM_REPO**: Link for Bot Upstream Repo, if you want default update, fill ```https://github.com/breakdowns/slam-mirrorbot```.
-- **UPSTREAM_BRANCH**: Branch name for Bot Upstream Repo (Recommended using master branch)
 ### Optional Field
 - **AUTHORIZED_CHATS**: Fill user_id and chat_id of you want to authorize.
 - **IS_TEAM_DRIVE**: Set to `True` if `GDRIVE_FOLDER_ID` is from a Team Drive else `False` or Leave it empty.
@@ -151,8 +150,8 @@ Fill up rest of the fields. Meaning of each fields are discussed below:
 - **STOP_DUPLICATE_MIRROR**: (Leave empty if unsure) if this field is set to `True`, bot will check file in Drive, if it is present in Drive, downloading will be stopped. (**Note**: File will be checked using filename, not using filehash, so this feature is not perfect yet)
 - **STOP_DUPLICATE_MEGA**: (Leave empty if unsure) if this field is set to `True`, bot will check file in Drive, if it is present in Drive, downloading Mega will be stopped.
 - **STOP_DUPLICATE_CLONE**: (Leave empty if unsure) if this field is set to `True`, bot will check file in Drive, if it is present in Drive, cloning will be stopped.
-- **CLONE_LIMIT**: To limit cloning Google Drive (leave space between number and unit, Available units is (gb or GB, tb or TB).
-- **MEGA_LIMIT**: To limit downloading Mega (leave space between number and unit, Available units is (gb or GB, tb or TB).
+- **CLONE_LIMIT**: To limit cloning Google Drive (leave space between number and unit, **TB or GB only**), examples: if you fill `1 GB` it will limit `1GB`.
+- **MEGA_LIMIT**: To limit downloading Mega (leave space between number and unit, **TB or GB only**), examples: if you fill `1 GB` it will limit `1GB`.
 - **TORRENT_DIRECT_LIMIT**: To limit the Torrent/Direct mirror size, Leave space between number and unit. Available units is (gb or GB, tb or TB).
 - **IMAGE_URL**: Show Image/Logo in /start message. Fill value of image your link image, use telegra.ph or any direct link image.
 - **VIEW_LINK**: View Link button to open file Index Link in browser instead of direct download link, you can figure out if it's compatible with your Index code or not, open any video from you Index and check if the END of link from browser link bar is `?a=view`, if yes make it `True` it will work (Compatible with [Bhadoo Index](https://github.com/ParveenBhadooOfficial/Google-Drive-Index) Code)
@@ -209,23 +208,6 @@ sudo docker build . -t mirrorbot
 ```
 sudo docker run mirrorbot
 ```
-
-## Deploying on Heroku
-
-- Give stars and Fork this repo then upload **token.pickle** to your forks
-- Hit the **DEPLOY TO HEROKU** button and follow the further instructions in the screen
-- **NOTE**: If you didn't upload **token.pickle**, uploading will not work. How to generate **token.pickle**? [Read here](https://github.com/breakdowns/slam-mirrorbot#getting-google-oauth-api-credential-file)
-- Recommended to use 1 App in 1 Heroku accounts
-
-<p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
-
-## Deploying on Heroku with heroku-cli and Goorm IDE
-<p><a href="https://telegra.ph/How-to-Deploy-a-Mirror-Bot-to-Heroku-with-CLI-05-06"> <img src="https://img.shields.io/badge/see%20on%20telegraph-grey?style=for-the-badge" width="190""/></a></p>
-
-## Video Tutorial deploying slam-mirrorbot on Heroku
-<p><a href="https://www.youtube.com/watch?v=WIhL0TrisfQ&t=1s"> <img src="https://img.shields.io/badge/See%20On%20Youtube-black?style=for-the-badge&logo=youtube" width="200""/></a></p>
-
-**NOTE**: Recommended to generate **token.pickle** manually. [Read here](https://github.com/breakdowns/slam-mirrorbot#getting-google-oauth-api-credential-file)
 
 # Using Service Accounts for uploading to avoid user rate limit
 For Service Account to work, you must set **USE_SERVICE_ACCOUNTS=**"True" in config file or environment variables, 
@@ -306,12 +288,12 @@ Where host is the name of extractor (eg. Youtube, Twitch). Multiple accounts of 
 # Credits
 
 Thanks to:
+- [Breakdowns](https://github.com/breakdowns/slam-mirrorbot) For His Huge Level of Modifications & Features
 - [out386](https://github.com/out386) heavily inspired from Telegram Bot which is written in JS
 - [Izzy12](https://github.com/lzzy12/) for original repo
 - [Dank-del](https://github.com/Dank-del/) for base repo
 - [magneto261290](https://github.com/magneto261290/) for some features
 - [SVR666](https://github.com/SVR666/) for some features & fixes
 - [anasty17](https://github.com/anasty17) for some features & help
-- [breakdowns](https://github.com/breakdowns) for Slam
 
-And many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/breakdowns/slam-mirrorbot/graphs/contributors).
+And many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/anmoldh/wenubmirrorbot/graphs/contributors).
